@@ -1,0 +1,11 @@
+---
+layout: default
+---
+{%- assign n = page.slug -%}{%- assign cs = n | split: "" -%}{%- assign ds = 0 -%}{%- for c in cs -%}{%- assign ds = ds | plus: c -%}{%- endfor -%}{%- assign core = ds -%}{%- for i in (1..3) -%}{%- if core > 9 and core != 11 and core != 22 and core != 33 -%}{%- assign t = 0 -%}{%- assign ks = core | append: "" | split: "" -%}{%- for c in ks -%}{%- assign t = t | plus: c -%}{%- endfor -%}{%- assign core = t -%}{%- endif -%}{%- endfor -%}{%- assign ck = core | append: "" -%}{%- assign dg = site.data.digits[ck] -%}
+<div id="profile" data-n="{{ n }}">
+<section class="nhero"><div class="wrap"><p class="crumbs"><a href="../../index.html">Home</a> / <a href="../../number/index.html">Numbers</a> / {{ n }}</p>
+<div class="flap" aria-label="{{ n }}">{% for c in cs %}<span class="t"><b>{{ c }}</b></span>{% endfor %}</div>
+<h1 class="nh1">Number {{ n }}: meaning, math, culture and value</h1>
+<p class="lede">{{ n }} adds up to {{ ds }}{% if core != ds %} and reduces to {{ core }}{% endif %} — the number of {{ dg.k }}. In angel-number tradition its message is: {{ dg.msg }}.</p></div></section>
+<div class="wrap" style="padding:30px 20px"><noscript><p>Turn on JavaScript to see the full profile of {{ n }}: numerology breakdown, cultural readings, math facts and premium value.</p></noscript><p><a href="../../number/index.html">Open the number explorer</a> · <a href="../../angel-numbers.html">Angel numbers</a> · <a href="../../lucky-numbers.html">Lucky numbers by culture</a></p></div>
+</div>

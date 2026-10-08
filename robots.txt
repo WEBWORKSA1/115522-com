@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://115522.com/sitemap.xml

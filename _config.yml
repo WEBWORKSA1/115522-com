@@ -1,0 +1,20 @@
+title: "115522"
+description: "Meaning, math, culture and value of any number."
+url: "https://115522.com"
+plugins:
+  - jekyll-sitemap
+collections:
+  n:
+    output: true
+    permalink: /number/:name/
+defaults:
+  - scope:
+      path: ""
+      type: n
+    values:
+      layout: number
+exclude:
+  - README.md
+  - project-docs
+  - Gemfile
+  - Gemfile.lock
