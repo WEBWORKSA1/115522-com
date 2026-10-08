@@ -10,6 +10,11 @@ collections:
 defaults:
   - scope:
       path: ""
+      type: pages
+    values:
+      layout: default
+  - scope:
+      path: ""
       type: n
     values:
       layout: number
